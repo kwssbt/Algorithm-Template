@@ -1,8 +1,4 @@
-给定起点，得到起点到每个点的最短距离
-可以处理负边，可以检查负环
-
-Bellman-Frod
-时间复杂度 O(NM)
+//Bellman-Frod，时间复杂度 O(NM)
 
 const int N=10005;
 const int INF=0x3f3f3f3f;
@@ -33,8 +29,7 @@ void bellman_frod(int s,int n){
     }
 }
 
-SPFA
-时间复杂度 O(NM) ，常数优化效果明显
+//SPFA，时间复杂度 O(NM) ，常数优化效果明显
 
 const int N=10005;
 const int INF=0x3f3f3f3f;
@@ -74,23 +69,11 @@ void spfa(int s){
     }
 }
 
-检查负环
-
-一共有 n 个节点，若无负环，每个节点最多松弛 n-1 次
-
-用一个 cnt[] 数组，记录每个节点松弛了多少次
-
-若发现某个节点松弛次数大于 n-1 ，说明有负环
-
-若有规定起点 s ，以 s 为起点跑 SPFA
-
-若没有规定起点，添加一个 虚拟起点 S
-
-虚拟起点 S 连接其它所有的节点，边权为 0
+//检查负环
 
 //记录每个节点的松弛次数
 int cnt[N];
-//有负环返回 1 ,否则返回 0 
+//有负环返回 1  
 bool spfa(int s,int n){
     queue<int>q;
     q.push(s);

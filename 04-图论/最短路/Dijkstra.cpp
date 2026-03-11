@@ -1,8 +1,4 @@
-给定起点，得到起点到每个点的最短距离
-不能处理负边
-
-普通堆实现
-时间复杂度 O(MlogM)
+//普通堆实现，时间复杂度 O(MlogM)
 
 const int N=1e5+5;
 const int INF=0x3f3f3f3f;
@@ -47,8 +43,7 @@ void dijkstra(int s){
     }
 }
 
-反向索引堆实现
-时间复杂度 O(MlogN)
+//反向索引堆实现，时间复杂度 O(MlogN)
 
 const int N=1e5+5;
 const int M=2e5+5;
