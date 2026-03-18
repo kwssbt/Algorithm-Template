@@ -1,3 +1,9 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+typedef long long ll;
+typedef __int128 i128;
+
 //算数快速幂
 ll qpow(ll b,ll e){
     ll res=1;
@@ -18,7 +24,7 @@ ll qpow(ll b,ll e,ll p){
     }
     return res;
 }
-//龟乘
+
 i128 mul(i128 a,i128 b,i128 mod){
     a%=mod;
     i128 res=0;
@@ -39,6 +45,7 @@ i128 qpow(i128 b,i128 e,i128 mod){
     }
     return ans;
 }
+
 //矩阵快速幂
 vector<vector<ll>>mul(vector<vector<ll>>&A,vector<vector<ll>>&B,int n){
     vector<vector<ll>>C(n,vector<ll>(n));

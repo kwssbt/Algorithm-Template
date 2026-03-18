@@ -1,3 +1,6 @@
+#include<bits/stdc++.h>
+using namespace std;
+
 class Trie{
     private:
     static const int N=1e7+5;
